@@ -16,7 +16,7 @@ jobs:
         java-version: 17
         distribution: microsoft
      - run: mvn --batch-mode  --update-snapshots verify
-     - run: mkdir staging && cp target/*.jar staging
+     - run: mvn -f path/to/pom.xml <goals> ...
      - name: Upload a Build Artifact 
        uses: actions/upload-artifact@v4.6.2
        with:
