@@ -17,9 +17,9 @@ jobs:
           distribution: microsoft
       - name: Build with Maven
         run: mvn --batch-mode  --update-snapshots verify
-        working-directory: C:\Program Files\apache-maven-3.9.10 # <--- IMPORTANT: Modify this line
+        working-directory: /home/runner/work/SRE-GITHUB-ACTIONS/SRE-GITHUB-ACTIONS # <--- IMPORTANT: Modify this line
       - run: mkdir staging && cp target/*.jar staging
-        working-directory: C:\Program Files\apache-maven-3.9.10 # <--- Add this line (if needed)
+        working-directory: /home/runner/work/SRE-GITHUB-ACTIONS/SRE-GITHUB-ACTIONS # <--- Add this line (if needed)
       - name: Upload a Build Artifact 
         uses: actions/upload-artifact@v4.6.2
         with:
